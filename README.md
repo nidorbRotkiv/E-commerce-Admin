@@ -56,19 +56,23 @@ Admin page for <a href="https://bestiehood.vercel.app/">E-commerce</a>
 </div>
 
 <div align="center"> 
- <img src="public/assets/screenshots/sc2.png" alt="screenshot" width="auto" height="auto" alt="screenshot1" />
+ <img src="public/assets/screenshots/sc2.png" alt="screenshot" width="auto" height="auto" alt="screenshot2" />
 </div>
 
 <div align="center"> 
- <img src="public/assets/screenshots/sc3.png" alt="screenshot" width="auto" height="auto" alt="screenshot1" />
+ <img src="public/assets/screenshots/sc3.png" alt="screenshot" width="auto" height="auto" alt="screenshot3" />
 </div>
 
 <div align="center"> 
- <img src="public/assets/screenshots/sc4.png" alt="screenshot" width="auto" height="auto" alt="screenshot1" />
+ <img src="public/assets/screenshots/sc4.png" alt="screenshot" width="auto" height="auto" alt="screenshot4" />
 </div>
 
 <div align="center"> 
- <img src="public/assets/screenshots/sc5.png" alt="screenshot" width="auto" height="auto" alt="screenshot1" />
+ <img src="public/assets/screenshots/sc5.png" alt="screenshot" width="auto" height="auto" alt="screenshot5" />
+</div>
+
+<div align="center"> 
+ <img src="public/assets/screenshots/sc6.png" alt="screenshot" width="auto" height="auto" alt="screenshot6" />
 </div>
 
 <!-- TechStack -->
