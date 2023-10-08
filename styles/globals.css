@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input,
+textarea,
+select {
+  @apply border border-gray-200 rounded-md px-1 w-full py-3 px-2;
+  @apply mb-2;
+  @apply shadow-sm;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  @apply border-primary;
+}
+h1 {
+  @apply text-primary mb-4 text-xl uppercase;
+}
+label {
+  @apply text-primary;
+}
+.btn-primary {
+  @apply bg-primary text-white px-4 py-1 rounded-md;
+}
+table.basic {
+  @apply w-full shadow-sm bg-white rounded-md;
+}
+table.basic thead tr td,
+table.basic thead tr th {
+  @apply text-sm text-gray-600 uppercase border-b border-gray-300 px-4 py-2;
+}
+table.basic tr td {
+  @apply p-1 px-4 py-1;
+}
+
+tr:hover {
+  @apply bg-secondary;
+}
+
+table.basic a {
+  @apply bg-primary text-white text-sm p-1 rounded-md px-2 inline-flex gap-1 mr-1;
+}
+
+.btn-red {
+  @apply bg-red-500 text-white;
+}
+.btn-default {
+  @apply bg-gray-500 text-white;
+}
+.btn-default,
+.btn-red {
+  @apply px-4 py-1 rounded-md;
+}
+img {
+  max-height: 100%;
+}
