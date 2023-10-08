@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/assets/logo.png" alt="logo" width="300" height="auto" />
+  <img src="public/assets/logo.png" alt="logo" width="350" height="auto" />
   <h1>E-commerce-Admin (The Bestiehood)</h1>
 
   <!-- <h2>
@@ -33,7 +33,7 @@
 ### :notebook: Description
 
 <p>
-Admin page for <a href="https://bestiehood.vercel.app/">E-commerce</a>
+Admin page for <a href="https://github.com/nidorbRotkiv/E-commerce-Front">E-commerce.</a>
 </p>
 
 <!-- Features -->
