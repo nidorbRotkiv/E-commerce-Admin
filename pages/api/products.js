@@ -6,28 +6,19 @@ export default async function handle(req, res) {
   await mongooseConnect();
   await isAdminRequest(req, res);
   try {
-    if (req.method === "POST") {
-      const {
-        title,
-        description,
-        category,
-        properties,
-        featured,
-        variantKey,
-        variantValues,
-      } = req.body;
-      const productDoc = await Product.create({
-        title,
-        description,
-        category: category || null,
-        properties: properties || null,
-        featured: featured || false,
-        variantKey,
-        variantValues,
-        selectedVariant: variantValues[0],
-      });
-      res.status(200).json(productDoc);
-    } else if (req.method === "PUT") {
+    const _id = req.query?.id;
+    if (req.method === "GET") {
+      if (req.query?.id) {
+        res.status(200).json(await Product.findOne({ _id }));
+      } else {
+        res.status(200).json(await Product.find());
+      }
+    } else if (req.method === "DELETE") {
+      if (req.query?.id) {
+        await Product.deleteOne({ _id });
+        res.status(200).json({ message: "Product deleted successfully." });
+      }
+    } else {
       const {
         _id,
         title,
@@ -38,30 +29,22 @@ export default async function handle(req, res) {
         variantKey,
         variantValues,
       } = req.body;
-      await Product.updateOne(
-        { _id },
-        {
-          title,
-          description,
-          category: category || null,
-          properties: properties || null,
-          featured: featured || false,
-          variantKey,
-          variantValues,
-          selectedVariant: variantValues[0],
-        }
-      );
-      res.status(200).end();
-    } else if (req.method === "GET") {
-      if (req.query?.id) {
-        res.status(200).json(await Product.findOne({ _id: req.query.id }));
-      } else {
-        res.status(200).json(await Product.find());
-      }
-    } else if (req.method === "DELETE") {
-      if (req.query?.id) {
-        await Product.deleteOne({ _id: req.query.id });
-        res.status(200).json({ message: "Product deleted successfully." });
+      const data = {
+        title,
+        description,
+        category: category || null,
+        properties: properties || null,
+        featured: featured || false,
+        variantKey,
+        variantValues,
+        selectedVariant: variantValues[0],
+      };
+      if (req.method === "POST") {
+        const productDoc = await Product.create(data);
+        res.status(200).json(productDoc);
+      } else if (req.method === "PUT") {
+        await Product.updateOne({ _id }, data);
+        res.status(200).end();
       }
     }
   } catch (error) {
