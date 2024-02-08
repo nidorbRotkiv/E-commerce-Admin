@@ -22,7 +22,7 @@
     - [:key: Environment Variables](#key-environment-variables)
   - [:toolbox: Getting Started](#toolbox-getting-started)
     - [:bangbang: Prerequisites](#bangbang-prerequisites)
-    - [Setup](#setup)
+    - [:gear: Setup](#gear-setup)
 
 <!-- About the Project -->
 
@@ -125,7 +125,7 @@ To run this project, you will need to add the following environment variables to
     <li><a href="https://cloud.google.com/">Google Cloud</a></li>
  </ul>
 
-### Setup
+### :gear: Setup
 
 Clone the project
 
